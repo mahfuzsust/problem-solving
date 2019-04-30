@@ -8,7 +8,7 @@ git clone git@github.com:mahfuzsust/problem-solving.git
 ## Directory Structure
 
 __models__ folder contains all the models <br>
-__src__ folder contains the module that solve each problem (__first.py__, __second.py__, __third.py__) <br>
+__src__ folder contains the module that solve each problem ([first.py](src/first.py), [second.py](src/second.py), [third.py](src/third.py)) <br>
 __test__ folder contains the unit tests for those modules
 
 ## Run Unit Test
