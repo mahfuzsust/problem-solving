@@ -1,27 +1,18 @@
 import io
 import sys
 import unittest
-from second import print_depth
-from models.person import Person
 
-class TestSecond(unittest.TestCase):
+import src
+from src.first import print_depth
+
+class TestFirst(unittest.TestCase):
     def setUp(self):
         self.capturedOutput = io.StringIO()
         sys.stdout = self.capturedOutput
-    
-    def test_requirement_1(self): 
-        person_a = Person("User", "1", None)
-        person_b = Person("User", "2", person_a)
-        print_depth({'key1': 1, 'key2': {'key3': 1, 'key4': {'key5': 4, 'user': person_b}}})
-        value = self.capturedOutput.getvalue()
-        value = value.strip().split('\n')[-1]
-        self.assertEqual(value, 'father 5', "Should pass first")
-    
-    def test_without_person(self): 
+
+    def test_basic(self): 
         print_depth({'key1': 1, 'key2': {'key3': 1, 'key4': {'key5': 4}}})
-        value = self.capturedOutput.getvalue()
-        value = value.strip().split('\n')[-1]
-        self.assertEqual(value, 'key5 3', "Should pass without person")
+        self.assertEqual(self.capturedOutput.getvalue(), 'key1 1\nkey2 1\nkey3 2\nkey4 2\nkey5 3\n', "Should pass basic")
     
     def test_empty_dictionary(self):
         print_depth({})

@@ -1,7 +1,11 @@
 import io
 import sys
 import unittest
-from third import LowestCommonAncestor
+
+import src
+from src.third import LowestCommonAncestor
+
+import models
 from models.node import Node
 
 class TestThird(unittest.TestCase):
