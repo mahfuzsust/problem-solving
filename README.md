@@ -29,7 +29,8 @@ Recursive function that will check each node if it's a dictionary subset or cust
 ### Lowest common ancestor
 Taking into consideration that
 * Each node will be unique and no duplication of node value <br>
-There will be given two nodes to find the common ancestor.
+<p>There will be given two nodes to find the common ancestor.</p>
+
 * For the first node, all the parent nodes (including itself) are added to a dictionary ( Space complexit O(n)).
 * For the second node, loop through all the parent nodes( including itself ) and check the value in the dictionary. If present that will be the lowest common ancestor
 
