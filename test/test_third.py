@@ -21,18 +21,24 @@ class TestThird(unittest.TestCase):
         self.eight = Node(8, self.four)
         self.nine = Node(9, self.four)
 
-    def test_requirement_1(self):
+    def test_happy_path(self):
         self.assertEqual(self.lowestCommonAncestor.lca(self.six, self.seven), 3, "Should be three")
+    
     def test_requirement_2(self):
         self.assertEqual(self.lowestCommonAncestor.lca(self.three, self.seven), 3, "Should be three")
+    
     def test_leaf(self):
         self.assertEqual(self.lowestCommonAncestor.lca(self.eight, self.seven), 1, "Should be one")
+    
     def test_parent_same(self):
         self.assertEqual(self.lowestCommonAncestor.lca(self.one, self.seven), 1, "Should be one")
+    
     def test_none(self):
         self.assertEqual(self.lowestCommonAncestor.lca(None, self.nine), None, "Should be none")
+    
     def test_none_2(self):
         self.assertEqual(self.lowestCommonAncestor.lca(self.one, None), None, "Should be none")
+    
     def test_string(self):
         self.assertEqual(self.lowestCommonAncestor.lca(self.one, "Hello"), None, "Should be none")
     
