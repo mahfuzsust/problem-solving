@@ -10,7 +10,3 @@ def get_largest_item(arr):
        return last
    mid = len(arr)//2
    return max(get_largest_item(arr[:mid]), get_largest_item(arr[mid:]))
-
-if __name__ == '__main__':
-    A = [5, 6, 7, 9, 11, 345, 567, 1, 3]
-    print(get_largest_item(A))
