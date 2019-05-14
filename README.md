@@ -44,9 +44,9 @@ Taking into consideration that
 * For the first node, all the parent nodes (including itself) are added to a dictionary ( Space complexit O(n)).
 * For the second node, loop through all the parent nodes( including itself ) and check the value in the dictionary. If present that will be the lowest common ancestor
 
-## Time Complexity
-* Finding maximum value in a rotated sorted array: O(lgn)
-* Finding common node in the shortest path: O(V^2)
-* Printing dictionary keys recursively: O(n)
-* Printing dictionary keys (custom model) recursively: O(n)
-* Lowest common ancestor: O(n)
+## Complexity
+* Finding maximum value in a rotated sorted array: Time: O(lgn)
+* Finding common node in the shortest path: Time: O(V^2), Space: O(V^2)
+* Printing dictionary keys recursively: Time: O(n)
+* Printing dictionary keys (custom model) recursively: Time: O(n)
+* Lowest common ancestor: Time: O(n)
